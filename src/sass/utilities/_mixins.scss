@@ -1,0 +1,123 @@
+@use "variables" as *;
+
+//breakpoints
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin md {
+	@media (min-width: #{$md}) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: #{$lg}) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: #{$xl}) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media (min-width: #{$xxl}) {
+		@content;
+	}
+}
+
+@mixin flex($prop: row, $prop2: center, $prop3: center) {
+	display: flex;
+	flex-direction: $prop;
+	align-items: $prop2;
+	justify-content: $prop3;
+}
+
+//text
+
+@mixin header_h1 {
+	font-family: $secondaryFont;
+	font-size: 2.625rem;
+	font-weight: 600;
+	line-height: 4rem;
+	letter-spacing: 0rem;
+}
+
+@mixin header_h2 {
+	font-family: $secondaryFont;
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 3rem;
+	letter-spacing: 0rem;
+}
+
+@mixin header_h3 {
+	font-family: $secondaryFont;
+	font-size: 1.75rem;
+	font-weight: 600;
+	line-height: 2.625rem;
+	letter-spacing: 0rem;
+}
+
+@mixin header_h6 {
+	font-family: $secondaryFont;
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.75rem;
+	letter-spacing: 0rem;
+}
+
+@mixin subheader {
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.875rem;
+	letter-spacing: 0rem;
+}
+
+@mixin action_1 {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	letter-spacing: 0rem;
+}
+
+@mixin action_2 {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	letter-spacing: 0rem;
+}
+
+@mixin body_1 {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.75rem;
+	letter-spacing: 0rem;
+}
+
+@mixin body_1 {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.625rem;
+	letter-spacing: 0rem;
+}
+
+@mixin caption_1 {
+	font-family: $secondaryFont;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	letter-spacing: 0.063rem;
+}
+
+@mixin caption_2 {
+	font-family: $secondaryFont;
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1.5rem;
+	letter-spacing: 0rem;
+}

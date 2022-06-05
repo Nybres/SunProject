@@ -163,6 +163,9 @@
 	padding: $sp-sm;
 	background-color: $grey;
 	@include lg {
+		padding: $sp-lg;
+	}
+	@include xl {
 		padding: $sp-xl;
 	}
 
@@ -208,6 +211,71 @@
 
 		&-text {
 			@include body_1();
+		}
+	}
+}
+
+.content {
+	position: relative;
+	padding: $sp-sm;
+	@include lg {
+		padding: $sp-lg;
+	}
+	@include xl {
+		padding: $sp-xl;
+	}
+
+	&__container {
+		@include flex(column);
+	}
+
+	&__block {
+		@include flex(column);
+		margin-bottom: 6em;
+		&:last-child {
+			margin-bottom: 0em;
+		}
+
+		@include md {
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 8em;
+
+			&--left {
+				flex-direction: row-reverse;
+			}
+		}
+
+		&-text {
+			@include md {
+				width: 45%;
+			}
+
+			@include xl {
+				width: 40%;
+			}
+		}
+
+		&-paragraph {
+			@include body_1();
+			margin-bottom: 2em;
+		}
+
+		&-img {
+			width: 100%;
+			height: 248px;
+			object-fit: cover;
+			border-radius: 8px;
+			margin-top: 2.5em;
+
+			@include md {
+				margin: 0em;
+				height: 400px;
+			}
+
+			@include xl {
+				height: 548px;
+			}
 		}
 	}
 }

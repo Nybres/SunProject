@@ -1,5 +1,15 @@
 @use "./utilities/index" as *;
 
+picture {
+	width: 100%;
+	@include md {
+		width: 45%;
+	}
+	@include xl {
+		width: 548px;
+	}
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -122,8 +132,15 @@
 }
 
 .title {
-	@include flex(column);
-	margin-bottom: 4em;
+	&--center {
+		@include flex(column);
+		margin-bottom: 4em;
+	}
+
+	&--left {
+		@include flex(column, flex-start);
+		margin-bottom: 1.25em;
+	}
 
 	&__first {
 		@include caption_1();
@@ -137,24 +154,24 @@
 }
 
 .icon {
-		position: relative;
-		@include flex();
-		width: 56px;
-		height: 56px;
+	position: relative;
+	@include flex();
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background-color: $primary_lighter;
+	margin-bottom: 2em;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 15px;
+		height: 15px;
 		border-radius: 50%;
-		background-color: $primary_lighter;
-		margin-bottom: 2em;
+		border: 3px solid $primary_active;
+	}
 
-		&::after {
-			position: absolute;
-			content: "";
-			width: 15px;
-			height: 15px;
-			border-radius: 50%;
-			border: 3px solid $primary_active;
-		}
-
-		@include md {
-			margin-bottom: 0em;
-		}
+	@include md {
+		margin-bottom: 0em;
+	}
 }

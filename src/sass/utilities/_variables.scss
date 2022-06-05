@@ -3,6 +3,9 @@
 //Colors
 $primary: #6e9eff;
 $primary_hover: #5086f2;
+$primary_active: #3f69bf;
+$primary_lightest: #f7f9ff;
+$primary_lighter: #e5eeff;
 $dark_4: #cfd3db;
 $dark_7: #858993;
 $dark_9: #242529;
@@ -10,6 +13,7 @@ $succes: #329f32;
 $warning: #c90d0d;
 $black: #000000;
 $white: #ffff;
+$grey: #f9f9fa;
 //Typography
 $primaryFont: "Inter", sans-serif;
 $secondaryFont: "Poppins", sans-serif;
@@ -24,3 +28,5 @@ $text-3xl: 1.875rem;
 $text-4xl: 2.25rem;
 
 //Spacing
+$sp-sm: 4em 2em;
+$sp-xl: 8rem 2em;

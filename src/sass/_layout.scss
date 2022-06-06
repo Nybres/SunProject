@@ -218,6 +218,7 @@
 .content {
 	position: relative;
 	padding: $sp-sm;
+
 	@include lg {
 		padding: $sp-lg;
 	}
@@ -227,6 +228,7 @@
 
 	&__container {
 		@include flex(column);
+		// border-bottom: 1px solid $dark_2;
 	}
 
 	&__block {
@@ -276,6 +278,106 @@
 			@include xl {
 				height: 548px;
 			}
+		}
+	}
+}
+
+.reviews {
+	position: relative;
+	padding: $sp-sm;
+
+	@include lg {
+		padding: $sp-lg;
+	}
+	@include xl {
+		padding: $sp-xl;
+	}
+
+	&__box {
+		position: relative;
+	}
+
+	&__container {
+		@include flex(column);
+		margin: 0 auto;
+		width: 100%;
+		max-width: 900px;
+
+		&-paragraph {
+			@include body_1();
+			padding: 2em 0em;
+			text-align: center;
+		}
+
+		&-photo {
+			height: 46px;
+			width: 46px;
+			margin-bottom: 2em;
+		}
+
+		&-subheader {
+			@include subheader();
+			color: $dark_9;
+		}
+
+		&-description {
+			@include body_1();
+			color: $dark_7;
+		}
+	}
+
+	&__arrows {
+		&-arrow {
+			position: absolute;
+			height: 28px;
+			width: 28px;
+			padding: 0.5em;
+			border: 1px solid $grey_100;
+			border-radius: 50%;
+			fill: $primary;
+			cursor: pointer;
+			transition: background-color ease 0.3s;
+
+			@include xl {
+				top: 50%;
+			}
+
+			&:hover {
+				background-color: $primary_lighter;
+			}
+
+			&:active {
+				background-color: $primary_200;
+			}
+
+			&--left {
+				left: 0px;
+			}
+
+			&--right {
+				right: 0px;
+			}
+		}
+	}
+}
+
+.blog {
+	position: relative;
+	background-color: $grey;
+	padding: $sp-sm;
+
+	@include lg {
+		padding: $sp-lg;
+	}
+	@include xl {
+		padding: $sp-xl;
+	}
+
+	&__header {
+		@include flex(row, center, space-between);
+
+		&-title{
+			@include header_h2();
 		}
 	}
 }

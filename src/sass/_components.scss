@@ -20,6 +20,13 @@ picture {
 	}
 }
 
+.divider {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1360px;
+	border-bottom: 1px solid $dark_2;
+}
+
 //burger button
 
 .burger {

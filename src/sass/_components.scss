@@ -152,11 +152,19 @@ picture {
 	&__first {
 		@include caption_1();
 		color: $primary_active;
+		
+		&--white {
+			color: $white;
+		}
 	}
 
 	&__second {
 		@include header_h2();
 		color: $dark_9;
+
+		&--white {
+			color: $white;
+		}
 	}
 }
 

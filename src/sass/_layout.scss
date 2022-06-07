@@ -375,9 +375,229 @@
 
 	&__header {
 		@include flex(row, center, space-between);
+		margin-bottom: 4em;
 
-		&-title{
+		&-title {
 			@include header_h2();
+		}
+	}
+
+	&__cards {
+		@include flex(column);
+		margin-bottom: 6em;
+
+		@include md {
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		@include xl {
+			margin-bottom: 10em;
+		}
+	}
+
+	&__card {
+		margin-bottom: 6em;
+		&:last-child {
+			margin-bottom: 0em;
+		}
+
+		@include md {
+			width: 46%;
+		}
+
+		@include lg {
+			width: 30%;
+			margin-bottom: 0em;
+		}
+
+		@include xl {
+			width: 31.766%;
+		}
+
+		&-img {
+			width: 100%;
+			height: 260px;
+			object-fit: cover;
+			border-radius: 8px;
+
+			@include md {
+				height: 320px;
+			}
+		}
+
+		&-body {
+			@include flex(column, flex-start);
+		}
+
+		&-category {
+			@include caption_1();
+			color: $primary_active;
+			margin-top: 1em;
+		}
+
+		&-title {
+			@include header_h6();
+			color: $dark_9;
+			margin-top: 0.75em;
+		}
+
+		&-text {
+			@include body_1();
+			color: $dark_8;
+			margin-top: 0.75em;
+		}
+
+		&-calendary {
+			@include flex();
+			margin-top: 1.25em;
+		}
+
+		&-date {
+			@include caption_1();
+			color: $dark_6;
+			margin-left: 0.688em;
+		}
+	}
+
+	&__cta {
+		background-color: $dark_9;
+		padding: 4em 2em;
+
+		@include xl {
+			padding: 8em 2em;
+		}
+
+		&-container {
+			@include flex(column);
+			margin: 0 auto;
+			width: 100%;
+			max-width: 555px;
+		}
+
+		&-paragraph {
+			@include body_1();
+			text-align: center;
+			color: $white;
+			margin-bottom: 2em;
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	padding: $sp-sm;
+
+	@include lg {
+		padding: $sp-lg;
+	}
+	@include xl {
+		padding: $sp-xl;
+	}
+
+	&__container {
+		@include flex(column-reverse);
+
+		&-img {
+			width: 100%;
+			margin-bottom: 2em;
+		}
+
+		&-field {
+			@include flex(column);
+			@include md {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		&-form {
+			width: 100%;
+		}
+	}
+
+	&__form {
+		padding: 4em;
+		background-color: $primary_lightest;
+		border-radius: 8px;
+
+		&-title {
+			@include header_h3();
+			color: $dark_9;
+			margin-bottom: 1em;
+		}
+
+		&-box {
+			position: relative;
+			display: flex;
+			width: 100%;
+
+			@include md {
+				width: 48%;
+			}
+
+			&--full {
+				@include md {
+					width: 100%;
+				}
+			}
+		}
+
+		&-input,
+		&-textarea {
+			// position: relative;
+			padding: 1.5em 1.25em;
+			background: $white;
+			border: 1px solid $grey_100;
+			border-radius: 2px;
+			cursor: pointer;
+			outline: none;
+			margin-bottom: 1.25em;
+			width: 100%;
+			transition: border-color ease 0.3s;
+
+			&:hover {
+				border-color: $dark_4;
+			}
+
+			&:active,
+			&:focus {
+				border-color: $primary_500;
+			}
+
+			&:focus ~ label {
+				transform: translateY(-27px) translateX(8px);
+			}
+		}
+
+		&-textarea {
+			width: 100%;
+			resize: vertical;
+			height: 250px;
+			min-height: 250px;
+			max-height: 250px;
+		}
+
+		&-label {
+			position: absolute;
+			top: 15px;
+			left: 10px;
+			padding: 0em 1em;
+			@include body_1();
+			color: $dark_7;
+			background-color: $white;
+			transition: transform ease 0.3s;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 8px;
+
+		@include md {
+			height: 340px;
 		}
 	}
 }

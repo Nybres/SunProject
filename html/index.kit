@@ -35,7 +35,7 @@
         </div>
     </header>
     <main>
-        <section class="benefits">
+        <section id="about" class="benefits">
             <div class="wrapper">
                 <div class="title title--center">
                     <p class="title__first">
@@ -234,7 +234,7 @@
             </div>
         </section>
 
-        <section class="blog">
+        <section id="blog" class="blog">
             <div class="wrapper">
                 <div class="blog__header">
                     <h2 class="blog__header-title">
@@ -366,7 +366,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="wrapper">
                 <div class="contact__container">
                     <div class="contact__container-form">
@@ -401,6 +401,17 @@
                                 <textarea class="contact__form-textarea" id="msg" cols="30" rows="10">
                                 </textarea>
                                 <label class="contact__form-label" for="msg">Twoja wiadomość</label>
+                            </div>
+
+                            <div class="contact__container-check">
+                                <input class="contact__form-check" type="checkbox" id="agree" checked>
+                                <label for="agree">
+                                    Zapoznałem się z regulaminem i wyrażam zgodę na przetwarzanie moich danych osobowych
+                                    przez Sungroup.pl
+                                </label>
+                            </div>
+                            <div class="contact__form-button">
+                                <input class="btn btn-lg btn--primary" type="submit" value="Wyślij wiadomość">
                             </div>
                         </form>
                     </div>

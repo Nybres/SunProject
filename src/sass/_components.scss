@@ -25,6 +25,11 @@ picture {
 	width: 100%;
 	max-width: 1360px;
 	border-bottom: 1px solid $dark_2;
+
+	&--full {
+		max-width: 100%;
+		margin: 1em 0em;
+	}
 }
 
 //burger button
@@ -152,7 +157,7 @@ picture {
 	&__first {
 		@include caption_1();
 		color: $primary_active;
-		
+
 		&--white {
 			color: $white;
 		}

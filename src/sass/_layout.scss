@@ -595,6 +595,14 @@
 				transform: translateY(-27px) translateX(8px);
 				font-size: 0.7rem;
 			}
+
+			&--error {
+				border: 1px solid $warning;
+			}
+
+			&--succes {
+				border: 1px solid $succes;
+			}
 		}
 
 		&-textarea {
@@ -614,6 +622,11 @@
 			color: $dark_7;
 			background-color: $white;
 			transition: transform ease 0.3s;
+
+			&--move{
+				transform: translateY(-27px) translateX(8px);
+				font-size: 0.7rem;
+			}
 		}
 
 		&-check {
